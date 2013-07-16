@@ -1,0 +1,52 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>Anypic</title>
+    <link rel="stylesheet" media="screen, projection" href="stylesheets/screen.css" type="text/css" />
+  </head>
+
+  <body>
+    <div id="main">
+      <div>
+        <div id="homepage" style="">
+          <div class="leather">
+            <header>
+              <!-- left -->
+              <div id="left">
+                <div id="slides" style="display: block;">
+                  <div class="slides_container" style="overflow: hidden; position: relative; display: block;">
+                    <div class="slides_control" style="position: relative; width: 738px; height: 354px; left: -246px;"><img src="images/anypic_screen0.jpg" class="screenshot" style="position: absolute; top: 0px; left: 246px; z-index: 0;"></div> 
+                  </div>
+                  <ul class="pagination"><li class=""><a href="#0">1</a></li><li class="current"><a href="#1">2</a></li><li class=""><a href="#2">3</a></li><li class=""><a href="#3">4</a></li></ul></div>
+                  <img src="images/iPhoneHand.png" class="frame replace-2x"/>
+                  <img src="images/Reflection.png" class="reflection replace-2x"/>              
+                </div>
+
+                <!-- right -->
+                <div id="right">
+                  <img src="images/icon.png"/>
+                  <img src="images/logo.png" class="logo"/>
+                  <h1>Share your pictures, share your story.</h1>
+
+                  <% if (locals.message) { %>
+                    <h2><%= message %></h2>
+                  <% } else { %>
+                    <h2>Get notified when we release</h2>
+                    <form action="/send_email" method="post"> 
+                      <input type="text" name="email" placeholder="Your email" />
+                      <button>Sign up</button>
+                    </form>
+                  <% } %>
+                </div>
+              </div>
+
+            </header>
+
+            <div class="footer">
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </body>
+</html>
